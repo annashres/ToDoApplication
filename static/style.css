@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:300,400,700);
+body {
+  font: 100% "Nunito", sans-serif;
+  font-weight: 100;
+  color: #8d96a5;
+  padding: 1.5em;
+  background: #24272e;
+}
+@media only screen and (max-device-width: 480px) {
+  body {
+    font-size: 80%;
+  }
+}
+
+.container {
+  margin: auto;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.55);
+}
+@media only screen and (min-device-width: 480px) {
+  .container {
+    max-width: 40em;
+    min-width: 18.75em;
+  }
+}
+.container > div {
+  position: relative;
+  padding: 3em;
+  padding-bottom: 4.5em;
+}
+
+h3 {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+  padding-top: 1.125em;
+  padding-bottom: 1.125em;
+  font-weight: 400;
+  border-bottom: 0.1875em solid;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-top: 1.125em;
+  padding-bottom: 1.125em;
+  border-bottom: 1px dashed;
+}
+
+input {
+  font-size: 1em;
+  line-height: 1.5;
+  color: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+input[type="text"] {
+  padding-left: 0.375em;
+  padding-right: 0.375em;
+  text-transform: capitalize;
+  width: 80%;
+}
+
+
+#displayTask {
+  display: none;
+}
+#displayTask .delete-btn {
+  display: none;
+}
+
+
+.delete-btn {
+  position: absolute;
+  font-size: 1em;
+  font-family: FontAwesome;
+  cursor: pointer;
+  right: -0.5em;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in;
+          transition: .2s ease-in;
+}
+
+li {
+  position: relative;
+}
+li:hover .delete-btn {
+  right: 0.5em;
+  visibility: visible;
+}
+
+.uncompleted {
+  background: #ebebeb;
+  border-top-right-radius: 0.3125em;
+  border-top-left-radius: 0.3125em;
+  color: #8d96a5;
+  border-color: #8d96a5;
+}
+.uncompleted li:hover {
+  color: #5a6372;
+}
+

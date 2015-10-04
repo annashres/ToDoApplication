@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Anna's Tasks </h1>
+	<div class="todoapp container">
+		  <div class="uncompleted">
+			<h3> To Do </h3>
+
+		   	{% for t in tasks %}
+			   	<ul class="uncompleted-list">
+			   	<li>
+		  			<input type="checkbox">
+
+			   		{{t[0]}}
+			<span class="delete-btn">
+			    <form method="post">
+			        <input type="submit" name="op" value="delete">
+			            <input type="hidden" value="{{t[0]}}" name="deleteTask"></input>
+			    </form></li>
+			</span>
+		    <form method="post" >
+		            Edit: <input type="text" name="editTask" value=""/>
+		            <input type="hidden" name="op" value="edit">
+		            <input type="hidden" value="{{t[1]}}" name="editTaskid"></input>
+		   </form></li>
+
+		   	{% endfor %}
+		    <form method="post" >
+		        <li>New: <input type="text" name="newTask" value=""/></li>
+		        <input type="hidden" name="op" value="add">
+		    </form>
+		    </ul>
+		</div>
+	</div>
+
+{% endblock %}
