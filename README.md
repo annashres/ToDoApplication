@@ -11,3 +11,7 @@ If mysql fails need to install mysql first: <br>
 <li>On Mac or Windows read here. <a href="http://mysql-python.blogspot.com/2012/11/is-mysqldb-hard-to-install.html">here</a> </li>
 </ul>
 run with python app.py
+<br>
+Screenshot
+![alt tag](http://i.imgur.com/ozWjcqV.png)
+
